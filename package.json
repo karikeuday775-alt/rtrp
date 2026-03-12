@@ -1,0 +1,22 @@
+{
+  "name": "premium-real-estate-marketplace",
+  "version": "1.0.0",
+  "description": "Premium AI-Powered Real Estate Marketplace",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "install-all": "npm install && cd client && npm install && cd ../server && npm install",
+    "seed": "cd server && npm run seed",
+    "generate-properties": "cd server && npm run generate-properties",
+    "verify-properties": "cd server && node scripts/verifyProperties.js"
+  },
+  "keywords": ["real-estate", "marketplace", "ai", "react", "node"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
